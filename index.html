@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>はらだのいべんと | 運営メンバー</title>
-    <!-- Google Fonts 導入でフォントを洗練 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #ff8e8b;
-            --secondary: #6bb0ff;
-            --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-            --card-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            /* アイコンの黄色に合わせたテーマカラー */
+            --primary: #fbc531;
+            --primary-dark: #e1b12c;
+            --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #f4f1ea 100%);
+            --card-shadow: 0 12px 24px rgba(0,0,0,0.06);
             --text-main: #2d3436;
             --text-sub: #636e72;
         }
@@ -32,125 +33,132 @@
             width: 100%;
             max-width: 500px;
             min-height: 100vh;
-            padding: 30px 15px;
+            padding: 20px 15px 40px;
             box-sizing: border-box;
         }
 
-        /* カバーエリア（洗練されたヘッダー） */
+        /* カバーエリア（バナーを全面に押し出す） */
         .profile-section {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-            padding: 30px 20px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 25px 20px 20px;
             text-align: center;
             margin-bottom: 40px;
             box-shadow: var(--card-shadow);
-            border: 1px solid rgba(255,255,255,0.8);
         }
         .profile-img-wrap {
-            position: relative;
             width: 100%;
-            max-width: 280px;
-            margin: 0 auto 15px;
+            max-width: 320px;
+            margin: 0 auto 10px;
         }
         .profile-img-wrap img {
             width: 100%;
             height: auto;
             border-radius: 12px;
             object-fit: contain;
-            border: 3px solid #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .profile-section h1 { 
-            font-family: 'Quicksand', 'Noto Sans JP', sans-serif;
-            font-weight: 900;
-            font-size: 24px; 
-            margin: 0 0 10px;
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            /* 画像自体が目立つように影と枠線を調整 */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: block;
         }
         .profile-section p { 
             font-size: 14px; 
             color: var(--text-sub); 
             line-height: 1.7; 
-            margin: 0; 
+            margin: 15px 0 0; 
             font-weight: 500;
         }
 
         /* セクション見出し */
         .section-title {
-            font-size: 18px;
-            font-weight: 700;
+            font-size: 19px;
+            font-weight: 900;
             text-align: center;
-            margin: 0 0 25px;
+            margin: 0 0 30px;
             color: var(--text-main);
             position: relative;
             display: inline-block;
             left: 50%;
             transform: translateX(-50%);
+            letter-spacing: 1px;
         }
         .section-title::after {
             content: "";
             position: absolute;
-            bottom: -8px;
-            left: 10%;
-            width: 80%;
-            height: 3px;
+            bottom: -10px;
+            left: 5%;
+            width: 90%;
+            height: 4px;
             background: var(--primary);
             border-radius: 2px;
         }
 
-        /* メンバーカードのリッチ化 */
+        /* メンバーカード */
         .member-card {
             background: #fff;
             border-radius: 20px;
             padding: 25px 20px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             box-shadow: var(--card-shadow);
             position: relative;
             transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid rgba(0,0,0,0.02);
+            border: 2px solid transparent;
         }
         .member-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
         
-        /* 参加回数バッジをおしゃれなリボン風に */
+        /* 参加回数バッジ（金・銀・銅・通常） */
         .attendance-badge {
             position: absolute;
-            top: -10px;
+            top: -12px;
             right: 15px;
-            background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
             color: #fff;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 900;
+            padding: 6px 14px;
             border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(116, 235, 213, 0.3);
             letter-spacing: 0.5px;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .rank-1 {
+            background: linear-gradient(135deg, #ffd32a 0%, #ffa801 100%);
+            box-shadow: 0 4px 10px rgba(255, 211, 42, 0.4);
+        }
+        .rank-2 {
+            background: linear-gradient(135deg, #d2dae2 0%, #808e9b 100%);
+            box-shadow: 0 4px 10px rgba(128, 142, 155, 0.4);
+        }
+        .rank-3 {
+            background: linear-gradient(135deg, #ffb8b8 0%, #ff9f43 100%);
+            box-shadow: 0 4px 10px rgba(255, 159, 67, 0.4);
+        }
+        .rank-normal {
+            background: linear-gradient(135deg, #a4b0be 0%, #747d8c 100%);
+            box-shadow: 0 4px 10px rgba(164, 176, 190, 0.3);
         }
 
         .member-header {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
         }
         .member-header img {
-            width: 70px;
-            height: 70px;
+            width: 75px;
+            height: 75px;
             border-radius: 50%;
             object-fit: cover;
             margin-right: 18px;
-            border: 3px solid #f4f7f6;
+            border: 3px solid var(--primary);
+            padding: 2px;
         }
-        .member-info { padding-right: 50px; flex: 1; }
+        .member-info { padding-right: 10px; flex: 1; }
         .member-info h3 { 
             margin: 0 0 6px; 
-            font-size: 18px; 
-            font-weight: 700;
+            font-size: 19px; 
+            font-weight: 900;
             color: var(--text-main); 
         }
         .member-info .role { 
@@ -158,10 +166,10 @@
             font-size: 13px; 
             color: var(--text-sub); 
             line-height: 1.5; 
-            font-weight: 500;
-            background: #f8f9fa;
+            font-weight: 700;
+            background: rgba(251, 197, 49, 0.15); /* 黄色の薄い背景 */
             display: inline-block;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 8px;
         }
         
@@ -170,7 +178,7 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 18px;
         }
         .sns-btn {
             display: inline-flex;
@@ -185,7 +193,6 @@
         }
         .sns-btn i { margin-right: 6px; font-size: 15px; }
         
-        /* ボタンの洗練されたカラースキーム */
         .btn-instagram { 
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             color: #fff; 
@@ -199,10 +206,10 @@
         .btn-sheet { 
             background: #fff; 
             color: #0f9d58; 
-            border: 1px solid #0f9d58;
+            border: 2px solid #0f9d58;
         }
         .btn-link { 
-            background: #2d3436; 
+            background: var(--text-main); 
             color: #fff; 
             box-shadow: 0 4px 10px rgba(45, 52, 54, 0.2);
         }
@@ -219,7 +226,7 @@
             font-size: 12px; 
             color: #b2bec3; 
             font-family: 'Quicksand', sans-serif;
-            font-weight: 600;
+            font-weight: 700;
         }
     </style>
 </head>
@@ -229,10 +236,10 @@
         
         <!-- コミュニティトップ -->
         <div class="profile-section">
+            <!-- 文字ダブリを解消するため、テキストの h1 は削除 -->
             <div class="profile-img-wrap">
                 <img src="images/top_logo.png" alt="はらだのいべんと">
             </div>
-            <h1>Harada no Event</h1>
             <p>大阪を中心にボドゲやスポーツを開催中！<br>ゆかいな運営メンバーたちをご紹介します✨</p>
         </div>
 
@@ -240,7 +247,7 @@
         <h2 class="section-title">運営メンバー紹介</h2>
 
         <div class="member-card">
-            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 110回</div>
+            <div class="attendance-badge rank-1"><i class="fas fa-crown"></i> 累計 110回</div>
             <div class="member-header">
                 <img src="images/harada.jpg" onerror="this.src='https://via.placeholder.com/150?text=はら'" alt="はらだ">
                 <div class="member-info">
@@ -253,7 +260,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 65回</div>
+            <div class="attendance-badge rank-2"><i class="fas fa-medal"></i> 累計 65回</div>
             <div class="member-header">
                 <img src="images/miyu.jpg" onerror="this.src='https://via.placeholder.com/150?text=みゆ'" alt="みゆう">
                 <div class="member-info">
@@ -266,7 +273,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 58回</div>
+            <div class="attendance-badge rank-3"><i class="fas fa-award"></i> 累計 58回</div>
             <div class="member-header">
                 <img src="images/ryutaro.jpg" onerror="this.src='https://via.placeholder.com/150?text=りゅ'" alt="りゅーたろー">
                 <div class="member-info">
@@ -278,7 +285,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 37回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 37回</div>
             <div class="member-header">
                 <img src="images/tobi.jpg" onerror="this.src='https://via.placeholder.com/150?text=とび'" alt="とび">
                 <div class="member-info">
@@ -290,7 +297,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 36回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 36回</div>
             <div class="member-header">
                 <img src="images/member_default.jpg" onerror="this.src='https://via.placeholder.com/150?text=かい'" alt="かいと">
                 <div class="member-info">
@@ -302,7 +309,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 31回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 31回</div>
             <div class="member-header">
                 <img src="images/yoshimitsu.jpg" onerror="this.src='https://via.placeholder.com/150?text=よし'" alt="よしみつ">
                 <div class="member-info">
@@ -315,7 +322,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 31回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 31回</div>
             <div class="member-header">
                 <img src="images/maru.jpg" onerror="this.src='https://via.placeholder.com/150?text=まる'" alt="まるちゃん">
                 <div class="member-info">
@@ -327,7 +334,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 28回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 28回</div>
             <div class="member-header">
                 <img src="images/kanako.jpg" onerror="this.src='https://via.placeholder.com/150?text=かな'" alt="かなこ">
                 <div class="member-info">
@@ -339,7 +346,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 17回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 17回</div>
             <div class="member-header">
                 <img src="images/hiroshi.jpg" onerror="this.src='https://via.placeholder.com/150?text=ひろ'" alt="ひろし。">
                 <div class="member-info">
