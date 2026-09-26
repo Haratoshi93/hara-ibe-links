@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>はらだのいべんと | メンバー紹介</title>
+    <title>はらだのいべんと | 運営メンバー</title>
+    <!-- Google Fonts 導入でフォントを洗練 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #ff8e8b;
+            --secondary: #6bb0ff;
+            --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            --card-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+        }
+
         body {
-            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            background-color: #f4f7f6;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,54 +30,119 @@
 
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 500px;
             min-height: 100vh;
-            background-color: #ffffff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-            padding: 40px 20px;
+            padding: 30px 15px;
             box-sizing: border-box;
         }
 
-        /* コミュニティトップ */
-        .profile { text-align: center; margin-bottom: 40px; }
-        .profile img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .profile h1 { font-size: 22px; color: #333; margin: 15px 0 5px; }
-        .profile p { font-size: 13px; color: #666; line-height: 1.6; margin: 0; }
+        /* カバーエリア（洗練されたヘッダー） */
+        .profile-section {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+        .profile-img-wrap {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px;
+        }
+        .profile-img-wrap img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        /* 可愛い王冠アイコンなどの装飾 */
+        .profile-img-wrap::after {
+            content: "👑";
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            font-size: 24px;
+            background: #fff;
+            border-radius: 50%;
+            padding: 2px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .profile-section h1 { 
+            font-family: 'Quicksand', 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            font-size: 24px; 
+            margin: 0 0 10px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .profile-section p { 
+            font-size: 14px; 
+            color: var(--text-sub); 
+            line-height: 1.7; 
+            margin: 0; 
+            font-weight: 500;
+        }
 
         /* セクション見出し */
         .section-title {
-            font-size: 15px;
-            color: #333;
-            font-weight: bold;
-            margin: 40px 0 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #eee;
+            font-size: 18px;
+            font-weight: 700;
             text-align: center;
+            margin: 0 0 25px;
+            color: var(--text-main);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
         }
 
-        /* メンバーカード */
+        /* メンバーカードのリッチ化 */
         .member-card {
             background: #fff;
-            border: 1px solid #eee;
-            border-radius: 15px;
-            padding: 20px;
+            border-radius: 20px;
+            padding: 25px 20px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            box-shadow: var(--card-shadow);
             position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .member-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
         }
         
-        /* 参加回数バッジ */
+        /* 参加回数バッジをおしゃれなリボン風に */
         .attendance-badge {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #f0f8ff;
-            color: #0066cc;
+            top: -10px;
+            right: 15px;
+            background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+            color: #fff;
             font-size: 11px;
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 12px;
-            border: 1px solid #cce5ff;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(116, 235, 213, 0.3);
+            letter-spacing: 0.5px;
         }
 
         .member-header {
@@ -73,43 +151,88 @@
             margin-bottom: 15px;
         }
         .member-header img {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 15px;
-            border: 1px solid #eee;
+            margin-right: 18px;
+            border: 3px solid #f4f7f6;
         }
-        .member-info { padding-right: 70px; } /* バッジと被らないように */
-        .member-info h3 { margin: 0 0 5px; font-size: 16px; color: #333; }
-        .member-info .role { margin: 0; font-size: 13px; color: #666; line-height: 1.4; }
+        .member-info { padding-right: 50px; flex: 1; }
+        .member-info h3 { 
+            margin: 0 0 6px; 
+            font-size: 18px; 
+            font-weight: 700;
+            color: var(--text-main); 
+        }
+        .member-info .role { 
+            margin: 0; 
+            font-size: 13px; 
+            color: var(--text-sub); 
+            line-height: 1.5; 
+            font-weight: 500;
+            background: #f8f9fa;
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 8px;
+        }
         
         /* メンバーSNSボタン群 */
         .sns-links {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
+            margin-top: 20px;
         }
         .sns-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 8px 15px;
-            border-radius: 20px;
+            padding: 10px 18px;
+            border-radius: 25px;
             text-decoration: none;
-            font-size: 12px;
-            font-weight: bold;
-            transition: all 0.2s;
+            font-size: 13px;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .sns-btn i { margin-right: 5px; font-size: 14px; }
+        .sns-btn i { margin-right: 6px; font-size: 15px; }
         
-        .btn-instagram { background: #ffe6eb; color: #d62976; }
-        .btn-shop { background: #e6f4ff; color: #1890ff; }
-        .btn-sheet { background: #e6ffed; color: #28a745; }
-        .btn-link { background: #f0f0f0; color: #333333; }
-        .sns-btn:hover { opacity: 0.8; transform: translateY(1px); }
+        /* ボタンの洗練されたカラースキーム */
+        .btn-instagram { 
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #fff; 
+            box-shadow: 0 4px 10px rgba(220, 39, 67, 0.2);
+        }
+        .btn-shop { 
+            background: linear-gradient(45deg, #36d1dc, #5b86e5); 
+            color: #fff; 
+            box-shadow: 0 4px 10px rgba(91, 134, 229, 0.2);
+        }
+        .btn-sheet { 
+            background: #fff; 
+            color: #0f9d58; 
+            border: 1px solid #0f9d58;
+        }
+        .btn-link { 
+            background: #2d3436; 
+            color: #fff; 
+            box-shadow: 0 4px 10px rgba(45, 52, 54, 0.2);
+        }
+        
+        .sns-btn:hover { 
+            transform: translateY(-2px); 
+            filter: brightness(1.05);
+        }
 
-        .footer { text-align: center; margin-top: 50px; font-size: 11px; color: #ccc; }
+        .footer { 
+            text-align: center; 
+            margin-top: 60px; 
+            padding-bottom: 30px;
+            font-size: 12px; 
+            color: #b2bec3; 
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -117,19 +240,21 @@
     <div class="container">
         
         <!-- コミュニティトップ -->
-        <div class="profile">
-            <img src="https://via.placeholder.com/150/EEEEEE/999999?text=Logo" alt="はらだのいべんと">
-            <h1>はらだのいべんと</h1>
-            <p>大阪を中心にボドゲやスポーツを開催中！<br>ゆかいな運営メンバーたちを紹介します✨</p>
+        <div class="profile-section">
+            <div class="profile-img-wrap">
+                <img src="https://via.placeholder.com/150/EEEEEE/999999?text=Logo" alt="はらだのいべんと">
+            </div>
+            <h1>Harada no Event</h1>
+            <p>大阪を中心にボドゲやスポーツを開催中！<br>ゆかいな運営メンバーたちをご紹介します✨</p>
         </div>
 
         <!-- セクション2: 運営メンバー紹介 -->
-        <div class="section-title">🧵 運営メンバー紹介</div>
+        <h2 class="section-title">運営メンバー紹介</h2>
 
         <div class="member-card">
-            <div class="attendance-badge">累計 110回参加</div>
+            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 110回</div>
             <div class="member-header">
-                <img src="images/harada.jpg" onerror="this.src='https://via.placeholder.com/100?text=はら'" alt="はらだ">
+                <img src="images/harada.jpg" onerror="this.src='https://via.placeholder.com/150?text=はら'" alt="はらだ">
                 <div class="member-info">
                     <h3>はらだ</h3>
                     <p class="role">主催者 / ボドゲ・スポーツ・酒・ポーカー / USJグランロイヤル</p>
@@ -140,9 +265,9 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge">累計 65回参加</div>
+            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 65回</div>
             <div class="member-header">
-                <img src="images/miyu.jpg" onerror="this.src='https://via.placeholder.com/100?text=みゆ'" alt="みゆう">
+                <img src="images/miyu.jpg" onerror="this.src='https://via.placeholder.com/150?text=みゆ'" alt="みゆう">
                 <div class="member-info">
                     <h3>みゆう</h3>
                     <p class="role">副主催 / 保育士 / ハンドメイド作家</p>
@@ -153,9 +278,9 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge">累計 58回参加</div>
+            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 58回</div>
             <div class="member-header">
-                <img src="images/ryutaro.jpg" onerror="this.src='https://via.placeholder.com/100?text=りゅ'" alt="りゅーたろー">
+                <img src="images/ryutaro.jpg" onerror="this.src='https://via.placeholder.com/150?text=りゅ'" alt="りゅーたろー">
                 <div class="member-info">
                     <h3>りゅーたろー</h3>
                     <p class="role">SE / サウナLOVE</p>
@@ -165,9 +290,9 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge">累計 37回参加</div>
+            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 37回</div>
             <div class="member-header">
-                <img src="images/tobi.jpg" onerror="this.src='https://via.placeholder.com/100?text=とび'" alt="とび">
+                <img src="images/tobi.jpg" onerror="this.src='https://via.placeholder.com/150?text=とび'" alt="とび">
                 <div class="member-info">
                     <h3>とび</h3>
                     <p class="role">ものづくり大好き</p>
@@ -177,9 +302,9 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge">累計 36回参加</div>
+            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 36回</div>
             <div class="member-header">
-                <img src="images/member_default.jpg" onerror="this.src='https://via.placeholder.com/100?text=かい'" alt="かいと">
+                <img src="images/member_default.jpg" onerror="this.src='https://via.placeholder.com/150?text=かい'" alt="かいと">
                 <div class="member-info">
                     <h3>かいと</h3>
                     <p class="role">SE / ポーカー狂い</p>
@@ -189,9 +314,9 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge">累計 31回参加</div>
+            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 31回</div>
             <div class="member-header">
-                <img src="images/yoshimitsu.jpg" onerror="this.src='https://via.placeholder.com/100?text=よし'" alt="よしみつ">
+                <img src="images/yoshimitsu.jpg" onerror="this.src='https://via.placeholder.com/150?text=よし'" alt="よしみつ">
                 <div class="member-info">
                     <h3>よしみつ</h3>
                     <p class="role">ボードゲームの神様 / 所有数400</p>
@@ -202,9 +327,9 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge">累計 31回参加</div>
+            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 31回</div>
             <div class="member-header">
-                <img src="images/maru.jpg" onerror="this.src='https://via.placeholder.com/100?text=まる'" alt="まるちゃん">
+                <img src="images/maru.jpg" onerror="this.src='https://via.placeholder.com/150?text=まる'" alt="まるちゃん">
                 <div class="member-info">
                     <h3>まるちゃん</h3>
                     <p class="role">北海道出身 / 中量重量ボドゲ好き</p>
@@ -214,9 +339,9 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge">累計 28回参加</div>
+            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 28回</div>
             <div class="member-header">
-                <img src="images/kanako.jpg" onerror="this.src='https://via.placeholder.com/100?text=かな'" alt="かなこ">
+                <img src="images/kanako.jpg" onerror="this.src='https://via.placeholder.com/150?text=かな'" alt="かなこ">
                 <div class="member-info">
                     <h3>かなこ</h3>
                     <p class="role">愛嬌担当 / マダミス好き</p>
@@ -226,9 +351,9 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge">累計 17回参加</div>
+            <div class="attendance-badge"><i class="fas fa-crown" style="margin-right:3px; font-size:10px;"></i> 累計 17回</div>
             <div class="member-header">
-                <img src="images/hiroshi.jpg" onerror="this.src='https://via.placeholder.com/100?text=ひろ'" alt="ひろし。">
+                <img src="images/hiroshi.jpg" onerror="this.src='https://via.placeholder.com/150?text=ひろ'" alt="ひろし。">
                 <div class="member-info">
                     <h3>ひろし。</h3>
                     <p class="role">ボドゲサークル「あいすくりーむ」主催者</p>
@@ -239,7 +364,7 @@
         </div>
 
         <div class="footer">
-            &copy; Harada no Event
+            &copy; 2026 Harada no Event
         </div>
 
     </div>
