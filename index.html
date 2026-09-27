@@ -37,35 +37,54 @@
             box-sizing: border-box;
         }
 
-        /* カバーエリア（バナーを全面に押し出す） */
+        /* カバーエリア（シームレス化＋アニメーション） */
+        @keyframes floatUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
         .profile-section {
-            background: #fff;
-            border-radius: 20px;
-            padding: 25px 20px 20px;
             text-align: center;
             margin-bottom: 40px;
-            box-shadow: var(--card-shadow);
+            animation: floatUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
         }
         .profile-img-wrap {
             width: 100%;
-            max-width: 320px;
-            margin: 0 auto 10px;
+            max-width: 380px; /* 少し大きめに */
+            margin: 0 auto 15px;
         }
         .profile-img-wrap img {
             width: 100%;
             height: auto;
-            border-radius: 12px;
-            object-fit: contain;
-            /* 画像自体が目立つように影と枠線を調整 */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            /* 画像の白背景を同化させる魔法 */
+            mix-blend-mode: multiply;
             display: block;
         }
-        .profile-section p { 
+        .profile-desc {
+            background: #fff;
+            border-radius: 15px;
+            padding: 15px 20px;
+            box-shadow: var(--card-shadow);
+            display: inline-block;
+            position: relative;
+        }
+        /* 吹き出しのしっぽ */
+        .profile-desc::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 0 10px 10px 10px;
+            border-style: solid;
+            border-color: transparent transparent #fff transparent;
+        }
+        .profile-desc p { 
             font-size: 14px; 
             color: var(--text-sub); 
             line-height: 1.7; 
-            margin: 15px 0 0; 
-            font-weight: 500;
+            margin: 0; 
+            font-weight: 700;
         }
 
         /* セクション見出し */
@@ -119,7 +138,7 @@
             padding: 6px 14px;
             border-radius: 20px;
             letter-spacing: 0.5px;
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Quicksand', 'Noto Sans JP', sans-serif;
             display: flex;
             align-items: center;
             gap: 4px;
@@ -236,18 +255,19 @@
         
         <!-- コミュニティトップ -->
         <div class="profile-section">
-            <!-- 文字ダブリを解消するため、テキストの h1 は削除 -->
             <div class="profile-img-wrap">
                 <img src="images/top_logo.png" alt="はらだのいべんと">
             </div>
-            <p>大阪を中心にボドゲやスポーツを開催中！<br>ゆかいな運営メンバーたちをご紹介します✨</p>
+            <div class="profile-desc">
+                <p>大阪を中心にボドゲやスポーツを開催中！<br>ゆかいな運営メンバーたちをご紹介します✨</p>
+            </div>
         </div>
 
         <!-- セクション2: 運営メンバー紹介 -->
         <h2 class="section-title">運営メンバー紹介</h2>
 
         <div class="member-card">
-            <div class="attendance-badge rank-1"><i class="fas fa-crown"></i> 累計 110回</div>
+            <div class="attendance-badge rank-1"><i class="fas fa-crown"></i> 2023年6月〜</div>
             <div class="member-header">
                 <img src="images/harada.jpg" onerror="this.src='https://via.placeholder.com/150?text=はら'" alt="はらだ">
                 <div class="member-info">
@@ -260,7 +280,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-2"><i class="fas fa-medal"></i> 累計 65回</div>
+            <div class="attendance-badge rank-2"><i class="fas fa-medal"></i> 2024年5月〜</div>
             <div class="member-header">
                 <img src="images/miyu.jpg" onerror="this.src='https://via.placeholder.com/150?text=みゆ'" alt="みゆう">
                 <div class="member-info">
@@ -273,7 +293,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-3"><i class="fas fa-award"></i> 累計 58回</div>
+            <div class="attendance-badge rank-3"><i class="fas fa-award"></i> 2023年7月〜</div>
             <div class="member-header">
                 <img src="images/ryutaro.jpg" onerror="this.src='https://via.placeholder.com/150?text=りゅ'" alt="りゅーたろー">
                 <div class="member-info">
@@ -286,7 +306,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 37回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2023年7月〜</div>
             <div class="member-header">
                 <img src="images/tobi.jpg" onerror="this.src='https://via.placeholder.com/150?text=とび'" alt="とび">
                 <div class="member-info">
@@ -298,7 +318,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 36回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2025年6月〜</div>
             <div class="member-header">
                 <img src="images/kaito.jpg" onerror="this.src='https://via.placeholder.com/150?text=かい'" alt="かいと">
                 <div class="member-info">
@@ -311,7 +331,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 31回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2024年1月〜</div>
             <div class="member-header">
                 <img src="images/yoshimitsu.jpg" onerror="this.src='https://via.placeholder.com/150?text=よし'" alt="よしみつ">
                 <div class="member-info">
@@ -324,19 +344,19 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 31回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2023年11月〜</div>
             <div class="member-header">
                 <img src="images/maru.jpg" onerror="this.src='https://via.placeholder.com/150?text=まる'" alt="まるちゃん">
                 <div class="member-info">
                     <h3>まるちゃん</h3>
-                    <p class="role">北海道出身 / 中量重量ボドゲ好き</p>
+                    <p class="role">北海道出身 / 中量・重量ボドゲ好き</p>
                 </div>
             </div>
             
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 28回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2023年9月〜</div>
             <div class="member-header">
                 <img src="images/kanako.jpg" onerror="this.src='https://via.placeholder.com/150?text=かな'" alt="かなこ">
                 <div class="member-info">
@@ -348,7 +368,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-check-circle"></i> 累計 17回</div>
+            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2025年6月〜</div>
             <div class="member-header">
                 <img src="images/hiroshi.jpg" onerror="this.src='https://via.placeholder.com/150?text=ひろ'" alt="ひろし。">
                 <div class="member-info">
