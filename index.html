@@ -127,7 +127,7 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
         
-        /* 参加回数バッジ（金・銀・銅・通常） */
+        /* 参加年度バッジ（年度ごとのグラデーション） */
         .attendance-badge {
             position: absolute;
             top: -12px;
@@ -143,21 +143,20 @@
             align-items: center;
             gap: 4px;
         }
-        .rank-1 {
-            background: linear-gradient(135deg, #ffd32a 0%, #ffa801 100%);
-            box-shadow: 0 4px 10px rgba(255, 211, 42, 0.4);
+        /* 2023年：最古参（深みのあるオレンジ・コーラル系） */
+        .year-2023 {
+            background: linear-gradient(135deg, #e17055 0%, #d63031 100%);
+            box-shadow: 0 4px 10px rgba(214, 48, 49, 0.3);
         }
-        .rank-2 {
-            background: linear-gradient(135deg, #d2dae2 0%, #808e9b 100%);
-            box-shadow: 0 4px 10px rgba(128, 142, 155, 0.4);
+        /* 2024年：中堅（さわやかなブルー系） */
+        .year-2024 {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            box-shadow: 0 4px 10px rgba(9, 132, 227, 0.3);
         }
-        .rank-3 {
-            background: linear-gradient(135deg, #ffb8b8 0%, #ff9f43 100%);
-            box-shadow: 0 4px 10px rgba(255, 159, 67, 0.4);
-        }
-        .rank-normal {
-            background: linear-gradient(135deg, #a4b0be 0%, #747d8c 100%);
-            box-shadow: 0 4px 10px rgba(164, 176, 190, 0.3);
+        /* 2025年：新規（フレッシュなグリーン系） */
+        .year-2025 {
+            background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
+            box-shadow: 0 4px 10px rgba(0, 184, 148, 0.3);
         }
 
         .member-header {
@@ -186,7 +185,7 @@
             color: var(--text-sub); 
             line-height: 1.5; 
             font-weight: 700;
-            background: rgba(251, 197, 49, 0.15); /* 黄色の薄い背景 */
+            background: rgba(251, 197, 49, 0.15);
             display: inline-block;
             padding: 5px 12px;
             border-radius: 8px;
@@ -267,7 +266,7 @@
         <h2 class="section-title">運営メンバー紹介</h2>
 
         <div class="member-card">
-            <div class="attendance-badge rank-1"><i class="fas fa-crown"></i> 2023年6月〜</div>
+            <div class="attendance-badge year-2023">2023年6月〜</div>
             <div class="member-header">
                 <img src="images/harada.jpg" onerror="this.src='https://via.placeholder.com/150?text=はら'" alt="はらだ">
                 <div class="member-info">
@@ -280,7 +279,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-2"><i class="fas fa-medal"></i> 2024年5月〜</div>
+            <div class="attendance-badge year-2024">2024年5月〜</div>
             <div class="member-header">
                 <img src="images/miyu.jpg" onerror="this.src='https://via.placeholder.com/150?text=みゆ'" alt="みゆう">
                 <div class="member-info">
@@ -293,7 +292,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-3"><i class="fas fa-award"></i> 2023年7月〜</div>
+            <div class="attendance-badge year-2023">2023年7月〜</div>
             <div class="member-header">
                 <img src="images/ryutaro.jpg" onerror="this.src='https://via.placeholder.com/150?text=りゅ'" alt="りゅーたろー">
                 <div class="member-info">
@@ -306,7 +305,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2023年7月〜</div>
+            <div class="attendance-badge year-2023">2023年7月〜</div>
             <div class="member-header">
                 <img src="images/tobi.jpg" onerror="this.src='https://via.placeholder.com/150?text=とび'" alt="とび">
                 <div class="member-info">
@@ -318,7 +317,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2025年6月〜</div>
+            <div class="attendance-badge year-2025">2025年6月〜</div>
             <div class="member-header">
                 <img src="images/kaito.jpg" onerror="this.src='https://via.placeholder.com/150?text=かい'" alt="かいと">
                 <div class="member-info">
@@ -331,7 +330,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2024年1月〜</div>
+            <div class="attendance-badge year-2024">2024年1月〜</div>
             <div class="member-header">
                 <img src="images/yoshimitsu.jpg" onerror="this.src='https://via.placeholder.com/150?text=よし'" alt="よしみつ">
                 <div class="member-info">
@@ -344,7 +343,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2023年11月〜</div>
+            <div class="attendance-badge year-2023">2023年11月〜</div>
             <div class="member-header">
                 <img src="images/maru.jpg" onerror="this.src='https://via.placeholder.com/150?text=まる'" alt="まるちゃん">
                 <div class="member-info">
@@ -356,7 +355,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2023年9月〜</div>
+            <div class="attendance-badge year-2023">2023年9月〜</div>
             <div class="member-header">
                 <img src="images/kanako.jpg" onerror="this.src='https://via.placeholder.com/150?text=かな'" alt="かなこ">
                 <div class="member-info">
@@ -368,7 +367,7 @@
         </div>
 
         <div class="member-card">
-            <div class="attendance-badge rank-normal"><i class="fas fa-history"></i> 2025年6月〜</div>
+            <div class="attendance-badge year-2025">2025年6月〜</div>
             <div class="member-header">
                 <img src="images/hiroshi.jpg" onerror="this.src='https://via.placeholder.com/150?text=ひろ'" alt="ひろし。">
                 <div class="member-info">
