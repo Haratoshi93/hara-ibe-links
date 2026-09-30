@@ -369,11 +369,14 @@
 
     </div>
 
-    <!-- ゲームデータを読み込み -->
-    <script src="games_data.js"></script>
+    <!-- 外部ライブラリ読み込み（CSVパース用） -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     
     <!-- フィルタリングと描画のロジック -->
     <script>
+        const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQVSz2YkqhkAs9EVXln_vYLPI0ROe56pWrNiyKwuaaoKQ70oWnU1HnHwkt7RBxH1AMTbPmmNpl-l9Sd/pub?gid=1771802548&single=true&output=csv';
+        let gamesData = []; // スプレッドシートから取得したデータが入ります
+
         let currentWeight = 'all';
         let currentPlayer = 'all';
         let currentTag = 'all';
@@ -498,8 +501,33 @@
         setupFilters('playerFilters', (val) => currentPlayer = val);
         setupFilters('tagFilters', (val) => currentTag = val);
 
-        // 初回描画
-        renderGames();
+        // 初回データ取得と描画
+        Papa.parse(csvUrl, {
+            download: true,
+            header: true,
+            complete: function(results) {
+                // CSVデータをサイト用の形式に変換
+                gamesData = results.data
+                    .filter(row => row['ゲーム名'] && row['ゲーム名'].trim() !== '') // 空行を除外
+                    .map(row => {
+                        return {
+                            title: row['ゲーム名'],
+                            category: row['カテゴリ'],
+                            desc: row['説明文（ここを編集してください）'],
+                            amazonUrl: row['Amazon URL'],
+                            players: row['プレイ人数'],
+                            weight: row['軽さ/重さ'],
+                            tags: row['タグ（カンマ区切り）'] ? row['タグ（カンマ区切り）'].split('、') : [],
+                            image: row['画像ファイル名'] || 'images/no-image.jpg'
+                        };
+                    });
+                renderGames();
+            },
+            error: function(err) {
+                grid.innerHTML = '<div class="no-results">データの読み込みに失敗しました。時間をおいて再読み込みしてください。</div>';
+                console.error("CSV Load Error:", err);
+            }
+        });
     </script>
 </body>
 </html>
