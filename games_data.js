@@ -12,7 +12,7 @@ const gamesData = [
         ],
         "desc": "2人専用のスプレンダー。宝石トークンを集めてカードを取得し、複数の勝利条件を争う宝石商対決。",
         "playTime": "30分",
-        "amazonUrl": "https://www.amazon.co.jp/dp/B0BLZ7H4H1"
+        "amazonUrl": "https://link.amazon/B07PrDNRT"
     },
     {
         "title": "GIN CRAFTERS",
@@ -26,8 +26,7 @@ const gamesData = [
             "アクション選択"
         ],
         "desc": "クラフトジンの蒸留家となり、素材収集・レシピ開発・ブランディングで最高の職人を目指す対戦ゲーム。",
-        "playTime": "45〜90分",
-        "amazonUrl": ""
+        "playTime": "45〜90分"
     },
     {
         "title": "PROJECT L",
@@ -42,7 +41,7 @@ const gamesData = [
         ],
         "desc": "アクリル製ポリオミノのピースをパズルにはめ込み、完成させて新しいピースを獲得するテトリス風ゲーム。",
         "playTime": "20〜40分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0fGjUpEP"
     },
     {
         "title": "チャオチャオ..！",
@@ -57,7 +56,7 @@ const gamesData = [
         ],
         "desc": "サイコロを振り、出目を嘘ついて橋を渡るコマを進めるブラフゲーム。バレると脱落するスリル満点の作品。",
         "playTime": "20〜30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B07sHhwNj"
     },
     {
         "title": "ダイスタック",
@@ -71,8 +70,7 @@ const gamesData = [
             "パーティー"
         ],
         "desc": "カードの指示に従ってサイコロを崩さずに積み上げるバランス系アクションゲーム。全員が最後まで参加できる。",
-        "playTime": "15〜30分",
-        "amazonUrl": ""
+        "playTime": "15〜30分"
     },
     {
         "title": "お憑かれ！おばけちゃん",
@@ -86,8 +84,7 @@ const gamesData = [
             "カード"
         ],
         "desc": "手札を出し切りつつ「酔いメーター」を9にギリギリ近づけて勝つチキンレース型カードゲーム。10超えると脱落。",
-        "playTime": "15〜20分",
-        "amazonUrl": ""
+        "playTime": "15〜20分"
     },
     {
         "title": "PANDEMIC",
@@ -102,7 +99,7 @@ const gamesData = [
         ],
         "desc": "全員で協力して世界に蔓延する感染症を制圧する協力ゲームの定番作品。役割分担と計画性が鍵。",
         "playTime": "45分",
-        "amazonUrl": "https://www.amazon.co.jp/dp/B09NMWY23V"
+        "amazonUrl": "https://link.amazon/B0f5ZZL3s"
     },
     {
         "title": "ギャンブラー×ギャンブル",
@@ -117,7 +114,7 @@ const gamesData = [
         ],
         "desc": "カジノを潰すギャンブラーとして手札を出し合い、合計数字が当たり目と一致すれば報酬を得る読み合いゲーム。",
         "playTime": "15〜30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0gDHdojb"
     },
     {
         "title": "七つの予言",
@@ -132,7 +129,7 @@ const gamesData = [
         ],
         "desc": "各トリックで自分が何位になるかを事前に「予言」し、予言通りに進めることで得点するビット系トリックテイキング。",
         "playTime": "25〜35分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B09xMvhRT"
     },
     {
         "title": "フリーライドUSA",
@@ -147,7 +144,7 @@ const gamesData = [
         ],
         "desc": "1950年代のアメリカを舞台に線路を敷いて旅客を運ぶ鉄道ゲーム。他者の路線を使うと国営化される独自ルール。",
         "playTime": "55分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B05NM6dLf"
     },
     {
         "title": "ナナ",
@@ -162,7 +159,7 @@ const gamesData = [
         ],
         "desc": "他プレイヤーの手札を記憶し、同じ数字3枚のセットを先に集める記憶型セット収集ゲーム。",
         "playTime": "15〜30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0ct8LiCK"
     },
     {
         "title": "ラブレター",
@@ -177,7 +174,7 @@ const gamesData = [
         ],
         "desc": "わずか16枚のカードで行う手札管理と推理のゲーム。最後まで手札に残った最高位のカードを持つ人が勝利。",
         "playTime": "20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0bfvr6gM"
     },
     {
         "title": "あいうえバトル",
@@ -192,7 +189,7 @@ const gamesData = [
         ],
         "desc": "お題の頭文字でワードを宣言しながら手札を出し切ることを目指すワード系カードゲーム。",
         "playTime": "15分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B02HIvMbD"
     },
     {
         "title": "もっとホイップを！",
@@ -207,7 +204,7 @@ const gamesData = [
         ],
         "desc": "ケーキを切り分けながら「取るか取らないか」のジレンマを楽しむ分配型パーティーゲーム。",
         "playTime": "20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0gR1kIne"
     },
     {
         "title": "エクストリームミッション",
@@ -222,7 +219,7 @@ const gamesData = [
         ],
         "desc": "エージェントとして手札の色・数字の組み合わせでミッションをクリアしていく対戦型手札管理カードゲーム。",
         "playTime": "30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0fKqnZ3M"
     },
     {
         "title": "焼肉焼いても店焼くな",
@@ -236,8 +233,7 @@ const gamesData = [
             "同時選択"
         ],
         "desc": "火力を調整しながら肉を焼くタイミングを読み合う同時選択型ゲーム。過熱して店が焼けると強制終了。",
-        "playTime": "人数×10分",
-        "amazonUrl": ""
+        "playTime": "人数×10分"
     },
     {
         "title": "グミトリック",
@@ -250,8 +246,7 @@ const gamesData = [
             "カード"
         ],
         "desc": "色ごとに勝敗を決める独自ルールのマストフォロー型トリックテイキング。伏せ札の使い時が勝敗の鍵。",
-        "playTime": "15分",
-        "amazonUrl": ""
+        "playTime": "15分"
     },
     {
         "title": "グリッズルド",
@@ -265,7 +260,7 @@ const gamesData = [
         ],
         "desc": "第一次大戦の塹壕を生き抜く協力ゲーム。手札を見せられない制限下でチームワークが問われる難度高め作品。",
         "playTime": "30〜45分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0fqpyVbh"
     },
     {
         "title": "ザ・クルー第９惑星の探索",
@@ -280,7 +275,7 @@ const gamesData = [
         ],
         "desc": "宇宙飛行士として50のミッションをこなす協力型トリックテイキング。会話制限の中でチームワークを発揮する。",
         "playTime": "20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B02GDrlfl"
     },
     {
         "title": "社長は定時で帰る",
@@ -294,8 +289,7 @@ const gamesData = [
             "カード"
         ],
         "desc": "手札の役職カードを出し合い、出世争いをしながら社長になって定時退社を目指すパーティーカードゲーム。",
-        "playTime": "15〜20分",
-        "amazonUrl": ""
+        "playTime": "15〜20分"
     },
     {
         "title": "なかぬきパラダイス",
@@ -310,7 +304,7 @@ const gamesData = [
         ],
         "desc": "欲張り過ぎた（数字が最大の）プレイヤーだけペナルティを受けるジレンマゲーム。",
         "playTime": "15分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0fO3Ookh"
     },
     {
         "title": "Ill-Illan",
@@ -325,7 +319,7 @@ const gamesData = [
         ],
         "desc": "自分のカードが見えない状態で他者が「要る/要らない」を宣言するブラフゲーム。同数字2枚でダメージ。",
         "playTime": "15分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0g7Nw26i"
     },
     {
         "title": "マスカレイドトリックパーティー",
@@ -339,7 +333,7 @@ const gamesData = [
         ],
         "desc": "役職カードの勝利条件を隠しながら行うトリックテイキングゲーム。正体隠匿要素が加わった個性派作品。",
         "playTime": "15分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0gb9HFeV"
     },
     {
         "title": "金魚の商人",
@@ -354,7 +348,7 @@ const gamesData = [
         ],
         "desc": "大富豪をベースに「市場」との両替システムを加えた手札管理ゲーム。いち早く手札を出し切った人が勝利。",
         "playTime": "20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0esNDzui"
     },
     {
         "title": "カイト",
@@ -369,7 +363,7 @@ const gamesData = [
         ],
         "desc": "砂時計が落ちきる前にカードを出して特定の砂時計をひっくり返す、リアルタイム協力ゲーム。わずか10分の緊張感。",
         "playTime": "10分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B067NGXFz"
     },
     {
         "title": "ナナトリドリ",
@@ -384,7 +378,7 @@ const gamesData = [
         ],
         "desc": "手札の並び替え禁止という独特ルールを持つ大富豪系カードゲーム。「ネクスト大富豪」とも呼ばれる作品。",
         "playTime": "10〜20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B04uvAQHd"
     },
     {
         "title": "ハゲタカのえじき",
@@ -399,7 +393,7 @@ const gamesData = [
         ],
         "desc": "全員が手持ちの数字カードを同時に出してポイントカードを競り合う同時選択型の心理戦ゲームの名作。",
         "playTime": "15〜20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B04RQCvLr"
     },
     {
         "title": "5本のキュウリ",
@@ -413,8 +407,7 @@ const gamesData = [
             "カード"
         ],
         "desc": "最後のトリックを取ってしまうと「キュウリ」をもらい、5本集めたら脱落する変則トリックテイキング。",
-        "playTime": "15〜20分",
-        "amazonUrl": ""
+        "playTime": "15〜20分"
     },
     {
         "title": "ペンギンパーティー",
@@ -429,7 +422,7 @@ const gamesData = [
         ],
         "desc": "色カードをピラミッド状に積み上げながら手持ちカードを出し切ることを目指す軽量カードゲーム。",
         "playTime": "15分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B00TejJq8"
     },
     {
         "title": "バッティング",
@@ -444,7 +437,7 @@ const gamesData = [
         ],
         "desc": "宝石タイルを全員で同時に指差し、自分だけが選んだタイルを獲得できる同時選択型の読み合いゲーム。",
         "playTime": "15〜30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0fYgT9nm"
     },
     {
         "title": "オバケパレード",
@@ -458,8 +451,7 @@ const gamesData = [
             "カード"
         ],
         "desc": "カードをめくってオバケを他者に押し付けながら最後まで生き残るチキンレース型カードゲーム。",
-        "playTime": "10〜20分",
-        "amazonUrl": ""
+        "playTime": "10〜20分"
     },
     {
         "title": "生ハムメロンゲーム",
@@ -474,7 +466,7 @@ const gamesData = [
         ],
         "desc": "同じ素材のカードを組み合わせて強化し、いち早く「生ハムメロン」などの料理を完成させるセット収集ゲーム。",
         "playTime": "15〜30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B03zVy7pv"
     },
     {
         "title": "オトスナー",
@@ -489,7 +481,7 @@ const gamesData = [
         ],
         "desc": "ウェイターとなってお盆カードを指先で支え、商品コマを落とさずに最も長く耐えることを目指すバランスゲーム。",
         "playTime": "10〜20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0dYw4YLa"
     },
     {
         "title": "SLIDE",
@@ -504,7 +496,7 @@ const gamesData = [
         ],
         "desc": "4×4グリッドにカードを「スライド」して同数字を隣接させ消すことで、最も低いスコアを目指す抽象ゲーム。",
         "playTime": "15分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B08mMIfUj"
     },
     {
         "title": "SKULL",
@@ -519,7 +511,7 @@ const gamesData = [
         ],
         "desc": "花またはドクロを裏向きに置いてビッドし、自分の宣言数枚をめくってドクロを避けられれば得点するブラフゲーム。",
         "playTime": "15〜45分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0exh1m5x"
     },
     {
         "title": "スコットランドヤード",
@@ -534,7 +526,7 @@ const gamesData = [
         ],
         "desc": "1人がミスターXとしてロンドン中を逃げ回り、残りが探偵として協力して追い詰める非対称追跡ゲームの名作。",
         "playTime": "45〜60分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0gNG4Uiu"
     },
     {
         "title": "ワードポーターズ",
@@ -548,8 +540,7 @@ const gamesData = [
             "パーティー"
         ],
         "desc": "限られたヒントカードを早い者勝ちで使い、自分のお題を相手に伝える連想クイズ系パーティーゲーム。",
-        "playTime": "20分",
-        "amazonUrl": ""
+        "playTime": "20分"
     },
     {
         "title": "ことばのクローバー！",
@@ -563,8 +554,7 @@ const gamesData = [
             "連想"
         ],
         "desc": "4枚のキーワードを1つのヒントワードでつなぎ、他プレイヤーがキーワードを当てる協力型連想ワードゲーム（So Clover!）。",
-        "playTime": "30分",
-        "amazonUrl": ""
+        "playTime": "30分"
     },
     {
         "title": "ゾン噛まPARTY",
@@ -579,7 +569,7 @@ const gamesData = [
         ],
         "desc": "手札を揃えてカードを伏せる椅子取りゲーム式パーティーゲーム。最後に残った1人が負けの超高速ゲーム。",
         "playTime": "5分以内",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0jcp59mT"
     },
     {
         "title": "英雄になろう！",
@@ -593,8 +583,7 @@ const gamesData = [
             "ファンタジー"
         ],
         "desc": "ダイスロールとクエスト達成でポイントを競うファンタジーテーマのパーティーカードゲーム。",
-        "playTime": "20〜30分",
-        "amazonUrl": ""
+        "playTime": "20〜30分"
     },
     {
         "title": "ディクシット：ディズニーエディション",
@@ -609,7 +598,7 @@ const gamesData = [
         ],
         "desc": "ディズニーアートを使ったディクシット。ヒントワードを出し、自分のカードを他者に当ててもらうイマジネーションゲーム。",
         "playTime": "30〜60分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0hckBzDG"
     },
     {
         "title": "13 Leaves -13枚の葉-",
@@ -624,7 +613,7 @@ const gamesData = [
         ],
         "desc": "場のカードに最小または最大の数字を出す条件を守りながら手札を出し切るゴーアウト系カードゲーム。",
         "playTime": "20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B06jJcxRz"
     },
     {
         "title": "シレット",
@@ -639,7 +628,7 @@ const gamesData = [
         ],
         "desc": "周囲に気づかれないよう「しれっと」特定アクションをこなすパーティーカードゲーム。超短時間で遊べる。",
         "playTime": "5〜15分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B01MU5WUN"
     },
     {
         "title": "PRESAGES",
@@ -653,8 +642,7 @@ const gamesData = [
             "チーム戦"
         ],
         "desc": "全カードに特殊効果がつくチーム戦トリックテイキング。カード効果とチームメイトとの連携で勝利を目指す。",
-        "playTime": "20〜30分",
-        "amazonUrl": ""
+        "playTime": "20〜30分"
     },
     {
         "title": "JUST ONE",
@@ -669,7 +657,7 @@ const gamesData = [
         ],
         "desc": "お題に対してヒントを1語ずつ書き、重複したヒントは消えてしまう協力型ワード当てゲーム。2019年ドイツゲーム大賞受賞。",
         "playTime": "20分",
-        "amazonUrl": "https://www.amazon.co.jp/dp/B07RZW81RS"
+        "amazonUrl": "https://link.amazon/B0hhoMSjq"
     },
     {
         "title": "オトツナゲーター",
@@ -684,7 +672,7 @@ const gamesData = [
         ],
         "desc": "出来事の断片の「音」を時系列でつなぎ合わせ、解答者が何のお題かを当てる協力型音表現パーティーゲーム。",
         "playTime": "20〜40分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B05VCM8Bz"
     },
     {
         "title": "コードネーム",
@@ -699,7 +687,7 @@ const gamesData = [
         ],
         "desc": "1語のヒントで複数のコードネームを仲間に伝えるチーム対抗ワードゲーム。相手チームに先を越されないよう競争。",
         "playTime": "15〜30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B08F34ytN"
     },
     {
         "title": "カタカナーシ",
@@ -714,7 +702,7 @@ const gamesData = [
         ],
         "desc": "カタカナ語をカタカナを一切使わず説明して当ててもらうワードパーティーゲーム。制限が盛り上がりを生む。",
         "playTime": "15分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0cG96tXR"
     },
     {
         "title": "はぁって言うゲーム",
@@ -729,7 +717,7 @@ const gamesData = [
         ],
         "desc": "「はぁ」などの短い言葉を声と表情だけで演じ分けてシチュエーションを当て合う演技系コミュニケーションゲーム。",
         "playTime": "15分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0868Uh9Q"
     },
     {
         "title": "犯人は踊る",
@@ -744,7 +732,7 @@ const gamesData = [
         ],
         "desc": "「犯人カード」が誰の手元にあるかを推理しながらカードを出し合う軽量カードゲーム。10分で終わる手軽さが人気。",
         "playTime": "10〜20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0fwxSIzQ"
     },
     {
         "title": "ファンタジーランクマスター",
@@ -759,7 +747,7 @@ const gamesData = [
         ],
         "desc": "ファンタジーのモンスターをお題に合わせてランク付けし、他プレイヤーの答えと照らし合わせるランキングゲーム。",
         "playTime": "20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B07OfQktU"
     },
     {
         "title": "タイムボム",
@@ -774,7 +762,7 @@ const gamesData = [
         ],
         "desc": "爆弾解除チームとボマー団に分かれ、誰がどちらか隠したまま導線を切り合う正体隠匿ゲーム。脱落なしで全員参加。",
         "playTime": "10〜30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B090zBEDE"
     },
     {
         "title": "ぼくらなかよし",
@@ -789,7 +777,7 @@ const gamesData = [
         ],
         "desc": "ことばカードで文を作り、その文が表す「気持ち」を他プレイヤーに当ててもらう協力型言葉遊びゲーム。",
         "playTime": "20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0fcaEHND"
     },
     {
         "title": "ファントムインク",
@@ -804,7 +792,7 @@ const gamesData = [
         ],
         "desc": "「霊」が文字を1文字ずつ書いてヒントを出し、チームが先に秘密ワードを当てる競争型ワード推理ゲーム。",
         "playTime": "20〜30分",
-        "amazonUrl": "https://www.amazon.co.jp/dp/B09XXK3N25"
+        "amazonUrl": "https://link.amazon/B09818O7D"
     },
     {
         "title": "人狼ドッチ？",
@@ -819,7 +807,7 @@ const gamesData = [
         ],
         "desc": "2枚の役職カードのうち1枚を選んで正体を決める短時間人狼系ゲーム。5〜10分で決着する超コンパクト版人狼。",
         "playTime": "5〜10分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B03XiGNGM"
     },
     {
         "title": "なにわのボブジテン",
@@ -833,8 +821,7 @@ const gamesData = [
             "説明"
         ],
         "desc": "大阪限定のボブジテン。カタカナ語をカタカナなしで説明して当ててもらう関西テイストのワードパーティーゲーム。",
-        "playTime": "30分",
-        "amazonUrl": ""
+        "playTime": "30分"
     },
     {
         "title": "エレガンツ",
@@ -848,8 +835,7 @@ const gamesData = [
             "カード"
         ],
         "desc": "カードを引くだけのシンプルな行動で「お上品さ」を競うコミカル系パーティーゲーム。マナー違反を指摘し合う。",
-        "playTime": "3〜5分",
-        "amazonUrl": ""
+        "playTime": "3〜5分"
     },
     {
         "title": "擬人化総選挙",
@@ -864,7 +850,7 @@ const gamesData = [
         ],
         "desc": "生き物・無機物・概念などのお題に対してイメージに合うカードを投票し合うコミュニケーション系ゲーム。",
         "playTime": "15〜25分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0hDL7t6b"
     },
     {
         "title": "YESマンをさがせ",
@@ -878,8 +864,7 @@ const gamesData = [
             "質問"
         ],
         "desc": "質問に対して誰が「YES」で誰が「NO」と答えるかを予想する信頼と偏見の質問ゲーム。チキンレース形式。",
-        "playTime": "20分",
-        "amazonUrl": ""
+        "playTime": "20分"
     },
     {
         "title": "Poemo,",
@@ -893,8 +878,7 @@ const gamesData = [
             "ストーリーテリング"
         ],
         "desc": "詩の断片カードを出し合い、協力して「一番エモいポエム」を完成させるゆる系ワードゲーム。大喜利が苦手でも遊べる。",
-        "playTime": "5〜15分",
-        "amazonUrl": ""
+        "playTime": "5〜15分"
     },
     {
         "title": "インカの黄金",
@@ -909,7 +893,7 @@ const gamesData = [
         ],
         "desc": "遺跡を探索しながら財宝を集める引き時判断ゲーム。5ラウンド行いリスクと報酬を天秤にかける。",
         "playTime": "20〜40分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0c08I037"
     },
     {
         "title": "インサイダーゲーム",
@@ -924,7 +908,7 @@ const gamesData = [
         ],
         "desc": "全員でYES/NOクイズに答えながら隠れた「インサイダー」を探す2段階の推理ゲーム。15分でできる万能パーティーゲーム。",
         "playTime": "15分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B05JxZmpW"
     },
     {
         "title": "ito",
@@ -939,7 +923,7 @@ const gamesData = [
         ],
         "desc": "各自の秘密の数字(1〜100)を共通テーマで例えながら昇順に並べる協力型コミュニケーションゲーム。",
         "playTime": "10〜15分",
-        "amazonUrl": "https://www.amazon.co.jp/dp/B07VG8VLL5"
+        "amazonUrl": "https://link.amazon/B0auvokcQ"
     },
     {
         "title": "コヨーテ",
@@ -954,7 +938,7 @@ const gamesData = [
         ],
         "desc": "自分のカードだけ見えない状態で全員の合計数を推測してビッドし合うブラフゲーム（ライアーズダイスのカード版）。",
         "playTime": "15〜30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0jelRnF0"
     },
     {
         "title": "ニムト男爵",
@@ -969,7 +953,7 @@ const gamesData = [
         ],
         "desc": "同時にカードを出し4つの列に並べ、6枚目を置くことになったら列を全部取るペナルティゲーム（6ニムト系列作）。",
         "playTime": "15〜30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0iar0zy3"
     },
     {
         "title": "レンソービンゴ",
@@ -984,7 +968,7 @@ const gamesData = [
         ],
         "desc": "お題から連想する言葉を書き、他プレイヤーと一致した数でビンゴを狙う連想コミュニケーションゲーム。",
         "playTime": "10〜20分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B02kTDSwl"
     },
     {
         "title": "クイズいいセン行きまSHOW!",
@@ -999,7 +983,7 @@ const gamesData = [
         ],
         "desc": "答えのないお題に数字で回答し、全員の回答の中でちょうど中央値を目指すコミュニケーション型クイズゲーム。",
         "playTime": "10〜30分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B01SULVBx"
     },
     {
         "title": "ゴリラ人狼",
@@ -1014,7 +998,7 @@ const gamesData = [
         ],
         "desc": "最初は「ウホッ」だけで議論するゴリラ人狼。追放されたプレイヤーの言葉を学びながら語彙が増えていく人狼系ゲーム。",
         "playTime": "5〜45分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0i7ySiy7"
     },
     {
         "title": "リゾート島に沈む鍵",
@@ -1029,7 +1013,7 @@ const gamesData = [
         ],
         "desc": "リゾート島でのオーナーの謎の死を1〜4人で協力して解き明かす協力型推理ゲーム（卓上探偵団シリーズ）。ソロ対応。",
         "playTime": "120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0et8KEi1"
     },
     {
         "title": "京都異世界ツアー",
@@ -1044,7 +1028,7 @@ const gamesData = [
         ],
         "desc": "修学旅行中、奇妙なお守りの力で異世界に転生してしまった高校生たち。王様の暗殺事件の犯人はこの中に！？笑いありのファンタジーマダミス。",
         "playTime": "60〜120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0hi9PiLM"
     },
     {
         "title": "高速深夜便の殺人者",
@@ -1059,7 +1043,7 @@ const gamesData = [
         ],
         "desc": "深夜バスという密室で起こった殺人事件。乗客全員が容疑者という王道シチュエーションで、限られた時間の中で真犯人をあぶり出す。",
         "playTime": "60〜120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B069LZRa9"
     },
     {
         "title": "キャンプ場の殺人鬼",
@@ -1074,7 +1058,7 @@ const gamesData = [
         ],
         "desc": "山奥のキャンプ場で起きた惨劇。次々と起こる殺人事件に、プレイヤー同士の疑心暗鬼が加速するスリリングなホラーマダミス。",
         "playTime": "60〜120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0dYzuim1"
     },
     {
         "title": "最期のソワレ",
@@ -1089,7 +1073,7 @@ const gamesData = [
         ],
         "desc": "舞台は19世紀のフランス。劇場の楽屋で起きた殺人事件をめぐり、華やかな演劇界の裏に潜む愛憎劇と嘘を解き明かす。",
         "playTime": "60〜120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B07XqJ5pr"
     },
     {
         "title": "棺呪-ヒツギノロイ-",
@@ -1104,7 +1088,7 @@ const gamesData = [
         ],
         "desc": "不気味な洋館で見つかった不可解な死体。館に伝わる「呪い」の噂と、それぞれの思惑が交差するオカルトミステリー。",
         "playTime": "60〜120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B08leVCdK"
     },
     {
         "title": "ウェンディ、大人になって",
@@ -1119,7 +1103,7 @@ const gamesData = [
         ],
         "desc": "「私が殺されてしまいました」。破壊されたAI・ウェンディがモニターから語りかける、奇妙な実験施設を舞台にしたSFサスペンス。",
         "playTime": "60〜120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0bqHVL6Y"
     },
     {
         "title": "優しい死神の席",
@@ -1134,7 +1118,7 @@ const gamesData = [
         ],
         "desc": "「死神」が同席する不思議な葬儀。参加者は死神から投げかけられる謎を解き、亡くなった人物の死の真相とそれぞれの秘密を解き明かす。",
         "playTime": "60〜120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0c2VFTgt"
     },
     {
         "title": "マーダーミステリー：ザ・トリロジー",
@@ -1149,7 +1133,7 @@ const gamesData = [
         ],
         "desc": "1970、1980、1990年。同じ6人のキャラクターが時代をまたぐ3つの連続したシナリオを通じて連続殺人鬼の謎に挑む壮大なミステリー。",
         "playTime": "60〜120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B09zzqXMD"
     },
     {
         "title": "死の館に探偵二人",
@@ -1164,7 +1148,7 @@ const gamesData = [
         ],
         "desc": "15年前の一家突然死事件の謎を解くため集められた6人。直後に管理人が殺害され、二人の探偵が真相を追う異色のミステリー。",
         "playTime": "60〜120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B05iKhtUh"
     },
     {
         "title": "雪の砦に怪鳥が舞う",
@@ -1179,7 +1163,7 @@ const gamesData = [
         ],
         "desc": "近世中華風の世界が舞台。神の化身〈怪鳥〉の噂がある雪に閉ざされた砦で起きた殺人事件。皇位継承を巡る人間ドラマと謎解き。",
         "playTime": "60〜120分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B09raeO6n"
     },
     {
         "title": "何度だって青い月に火を灯した",
@@ -1194,7 +1178,7 @@ const gamesData = [
         ],
         "desc": "マフィアのボスが殺害され、容疑者はファミリーの幹部たち。ハードボイルドな世界観で繰り広げられる、シリーズを代表する傑作。",
         "playTime": "60〜180分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B01qjBdzZ"
     },
     {
         "title": "最果亭の災禍",
@@ -1209,7 +1193,7 @@ const gamesData = [
         ],
         "desc": "世界の果てにある宿屋「最果亭」。人間やエルフなど様々な種族が集うファンタジー世界で起きた、不可解な殺人事件の謎を解く。",
         "playTime": "60〜180分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B0hDmV87x"
     },
     {
         "title": "想いは満天の星に",
@@ -1224,7 +1208,7 @@ const gamesData = [
         ],
         "desc": "七夕の夜、天文部に所属する高校生たちを襲った悲劇。青春の甘酸っぱさと、それぞれが抱える隠された秘密が交差するエモーショナルな作品。",
         "playTime": "60〜180分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B09K5hQM3"
     },
     {
         "title": "九頭竜館の殺人",
@@ -1239,7 +1223,7 @@ const gamesData = [
         ],
         "desc": "クトゥルフ神話の要素を散りばめた館ミステリー。降霊会が行われた古館で起きる猟奇的な殺人事件。正気度を保ちながら真相に辿り着けるか。",
         "playTime": "120〜180分",
-        "amazonUrl": ""
+        "amazonUrl": "https://link.amazon/B09I4LpW2"
     },
     {
         "title": "探偵禁止領域",
@@ -1253,7 +1237,66 @@ const gamesData = [
             "ロールプレイ"
         ],
         "desc": "探偵が禁止された世界で、連続殺人事件に挑む。個性豊かなキャラクターたちによる、スタイリッシュで謎めいた推理ミステリー。",
-        "playTime": "60〜120分",
-        "amazonUrl": ""
+        "playTime": "60〜120分"
+    },
+    {
+        "title": "カタン",
+        "image": "images/no-image.jpg",
+        "players": "3〜4人",
+        "weight": "中量級",
+        "category": "",
+        "tags": [],
+        "desc": "",
+        "amazonUrl": "https://link.amazon/B0gGdLEsN"
+    },
+    {
+        "title": "六華",
+        "image": "images/no-image.jpg",
+        "players": "2〜5人",
+        "weight": "軽量級",
+        "category": "",
+        "tags": [],
+        "desc": "",
+        "amazonUrl": "https://link.amazon/B0e1Ne3m7"
+    },
+    {
+        "title": "お邪魔者",
+        "image": "images/no-image.jpg",
+        "players": "3〜10人",
+        "weight": "軽量級",
+        "category": "",
+        "tags": [],
+        "desc": "",
+        "amazonUrl": "https://link.amazon/B0dxqDxgg"
+    },
+    {
+        "title": "ギャングポーカー",
+        "image": "images/no-image.jpg",
+        "players": "3〜6人",
+        "weight": "軽量級",
+        "category": "",
+        "tags": [],
+        "desc": "",
+        "amazonUrl": "https://link.amazon/B08IGIMRb"
+    },
+    {
+        "title": "アルバトロスの黄金の雨",
+        "image": "images/no-image.jpg",
+        "players": "5〜6人",
+        "weight": "",
+        "category": "",
+        "tags": [],
+        "desc": "",
+        "amazonUrl": "https://link.amazon/B09h0mdXx"
+    },
+    {
+        "title": "廃城の錬金術師",
+        "image": "images/no-image.jpg",
+        "players": "6人",
+        "weight": "",
+        "category": "",
+        "tags": [],
+        "desc": "",
+        "amazonUrl": "https://link.amazon/B0al9Pf2o"
     }
 ];
