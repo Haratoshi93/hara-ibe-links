@@ -306,7 +306,10 @@
             
             <div class="filter-group">
                 <span class="filter-group-label"><i class="fas fa-weight-hanging"></i> 軽さ/重さ</span>
-                <p class="filter-desc">軽量級：ルールが直感的で初心者でも短時間で覚えられる　／　中量級：考えどころが多くやりごたえがある　／　重量級：ルールが緻密で深い戦略と長考が必要（BGG Weight基準）</p>
+                <p class="filter-desc">
+                    軽量級：ルールが直感的で初心者でも短時間で覚えられる　／　中量級：考えどころが多くやりごたえがある　／　重量級：ルールが緻密で深い戦略と長考が必要（BGG Weight基準）<br>
+                    <span style="color: #e74c3c;">※「軽さ/重さ」はボードゲーム固有の指標のため、推理ゲームやマダミスは絞り込み対象外（非表示）となります。</span>
+                </p>
                 <div class="filter-buttons" id="weightFilters">
                     <button class="filter-btn active" data-val="all">すべて</button>
                     <button class="filter-btn" data-val="軽量級">軽量級</button>
@@ -347,6 +350,11 @@
             </div>
         </div>
 
+        <!-- 件数表示 -->
+        <div style="text-align: right; margin-bottom: 10px; font-size: 14px; font-weight: 900; color: var(--text-sub);" id="resultCount">
+            <!-- JSで件数が入ります -->
+        </div>
+
         <!-- ギャラリー表示領域 -->
         <div class="game-grid" id="gameGrid">
             <!-- JSで自動生成されます -->
@@ -373,6 +381,7 @@
 
         const grid = document.getElementById('gameGrid');
         const searchInput = document.getElementById('searchInput');
+        const countDisplay = document.getElementById('resultCount');
 
         // 人数の範囲内に指定の人数が含まれるか判定
         function matchPlayerCount(playersStr, selected) {
@@ -400,7 +409,17 @@
             
             const filtered = gamesData.filter(game => {
                 const matchSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
-                const matchWeight = currentWeight === 'all' || game.weight === currentWeight;
+                
+                // 軽さ/重さフィルター：ボードゲームカテゴリのみ対象
+                let matchWeight = true;
+                if (currentWeight !== 'all') {
+                    if (game.category !== 'ボードゲーム') {
+                        matchWeight = false;
+                    } else {
+                        matchWeight = game.weight === currentWeight;
+                    }
+                }
+
                 const matchPlayer = matchPlayerCount(game.players, currentPlayer);
                 
                 // タグフィルター：カテゴリとカスタムタグの両方をチェック
@@ -413,6 +432,9 @@
 
                 return matchSearch && matchWeight && matchPlayer && matchTag;
             });
+
+            // 件数表示の更新（例： 15 / 69 件）
+            countDisplay.innerText = `${filtered.length} / ${gamesData.length} 件`;
 
             if (filtered.length === 0) {
                 grid.innerHTML = '<div class="no-results">条件に一致するゲームが見つかりませんでした。</div>';
