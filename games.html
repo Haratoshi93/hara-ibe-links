@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所有ボードゲーム一覧 | はらだのいべんと</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #fbc531;
+            --primary-dark: #e1b12c;
+            --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #f4f1ea 100%);
+            --card-shadow: 0 12px 24px rgba(0,0,0,0.06);
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            min-height: 100vh;
+            padding: 20px 15px 40px;
+            box-sizing: border-box;
+        }
+
+        /* 戻るボタン */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: color 0.2s;
+        }
+        .back-btn i {
+            margin-right: 5px;
+        }
+        .back-btn:hover {
+            color: var(--primary-dark);
+        }
+
+        /* セクション見出し */
+        .section-title {
+            font-size: 22px;
+            font-weight: 900;
+            text-align: center;
+            margin: 0 0 10px;
+            color: var(--text-main);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            letter-spacing: 1px;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 5%;
+            width: 90%;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .section-desc {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-sub);
+            margin-bottom: 30px;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        /* 検索・フィルターエリア */
+        .filter-section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 30px;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            transition: border-color 0.2s;
+        }
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .filter-group {
+            margin-bottom: 10px;
+        }
+        .filter-group-label {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            display: block;
+        }
+        .filter-desc {
+            font-size: 11px;
+            color: var(--text-sub);
+            margin: -5px 0 10px 0;
+        }
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .filter-btn {
+            background: #f1f2f6;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-sub);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-btn:hover {
+            background: #dfe6e9;
+        }
+        .filter-btn.active {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(251, 197, 49, 0.3);
+        }
+
+        /* ギャラリーグリッド */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        /* ゲームカード */
+        .game-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .game-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #f1f2f6;
+        }
+
+        .game-info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .game-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            font-size: 11px;
+            font-weight: 700;
+            background: #f1f2f6;
+            color: var(--text-sub);
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+
+        .tag.players {
+            background: rgba(251, 197, 49, 0.2);
+            color: #d35400;
+        }
+        .tag.weight {
+            background: rgba(52, 152, 219, 0.15);
+            color: #2980b9;
+        }
+        .tag.category {
+            background: rgba(155, 89, 182, 0.15);
+            color: #8e44ad;
+        }
+        .tag.custom {
+            background: rgba(26, 188, 156, 0.15);
+            color: #16a085;
+        }
+
+        .game-title {
+            font-size: 16px;
+            font-weight: 900;
+            margin: 0 0 10px 0;
+            line-height: 1.4;
+        }
+
+        .game-desc {
+            font-size: 12px;
+            color: var(--text-sub);
+            line-height: 1.5;
+            margin: 0 0 15px 0;
+            flex-grow: 1;
+        }
+
+        /* Amazonボタン */
+        .btn-amazon {
+            display: block;
+            text-align: center;
+            background: #232f3e;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 10px 0;
+            border-radius: 8px;
+            transition: background 0.2s;
+            margin-top: auto;
+        }
+        .btn-amazon i {
+            color: #fbc531;
+            margin-right: 5px;
+        }
+        .btn-amazon:hover {
+            background: #131a22;
+        }
+
+        /* フッター */
+        .footer { 
+            text-align: center; 
+            margin-top: 60px; 
+            padding-bottom: 20px;
+            font-size: 12px; 
+            color: #b2bec3; 
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+        }
+        .disclaimer {
+            font-size: 10px; 
+            color: #b2bec3; 
+            text-align: left; 
+            line-height: 1.5; 
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.02);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-sub);
+            font-weight: 700;
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <a href="index.html" class="back-btn"><i class="fas fa-chevron-left"></i> 運営メンバー紹介へ戻る</a>
+
+        <h1 class="section-title">所有ボードゲーム一覧</h1>
+        <p class="section-desc">
+            主催者が保有する全ゲームのリストです。<br>
+            ※Amazonリンクがあるゲームのみ購入ボタンが表示されます。
+        </p>
+
+        <!-- 検索・フィルター -->
+        <div class="filter-section">
+            <input type="text" id="searchInput" class="search-box" placeholder="ゲーム名で検索...">
+            
+            <div class="filter-group">
+                <span class="filter-group-label"><i class="fas fa-weight-hanging"></i> 軽さ/重さ</span>
+                <p class="filter-desc">軽量級：ルールが直感的で初心者でも短時間で覚えられる　／　中量級：考えどころが多くやりごたえがある　／　重量級：ルールが緻密で深い戦略と長考が必要（BGG Weight基準）</p>
+                <div class="filter-buttons" id="weightFilters">
+                    <button class="filter-btn active" data-val="all">すべて</button>
+                    <button class="filter-btn" data-val="軽量級">軽量級</button>
+                    <button class="filter-btn" data-val="中量級">中量級</button>
+                    <button class="filter-btn" data-val="重量級">重量級</button>
+                </div>
+            </div>
+
+            <div class="filter-group" style="margin-top: 15px;">
+                <span class="filter-group-label"><i class="fas fa-users"></i> 遊べる人数</span>
+                <div class="filter-buttons" id="playerFilters">
+                    <button class="filter-btn active" data-val="all">すべて</button>
+                    <button class="filter-btn" data-val="2">2人</button>
+                    <button class="filter-btn" data-val="3">3〜4人</button>
+                    <button class="filter-btn" data-val="5">5〜6人</button>
+                    <button class="filter-btn" data-val="7">7人以上</button>
+                    <button class="filter-btn" data-val="10">大人数(10人〜)</button>
+                </div>
+            </div>
+
+            <div class="filter-group" style="margin-top: 15px;">
+                <span class="filter-group-label"><i class="fas fa-tags"></i> カテゴリ・タグ</span>
+                <div class="filter-buttons" id="tagFilters">
+                    <button class="filter-btn active" data-val="all">すべて</button>
+                    <button class="filter-btn" data-val="ボードゲーム">ボードゲーム</button>
+                    <button class="filter-btn" data-val="推理ゲーム">推理ゲーム</button>
+                    <button class="filter-btn" data-val="マダミス">マダミス</button>
+                    <button class="filter-btn" data-val="パーティー">パーティー</button>
+                    <button class="filter-btn" data-val="正体隠匿">正体隠匿</button>
+                    <button class="filter-btn" data-val="協力">協力</button>
+                    <button class="filter-btn" data-val="心理戦">心理戦</button>
+                    <button class="filter-btn" data-val="戦略">戦略</button>
+                    <button class="filter-btn" data-val="ワード">ワード</button>
+                    <button class="filter-btn" data-val="トリックテイキング">トリックテイキング</button>
+                    <button class="filter-btn" data-val="ブラフ">ブラフ</button>
+                    <button class="filter-btn" data-val="チキンレース">チキンレース</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ギャラリー表示領域 -->
+        <div class="game-grid" id="gameGrid">
+            <!-- JSで自動生成されます -->
+        </div>
+
+        <div class="footer">
+            <div class="disclaimer">
+                はらだのいべんとは、Amazon.co.jpを宣伝しリンクすることによってサイトが紹介料を獲得できる手段を提供することを目的に設定されたアフィリエイトプログラムである、Amazonアソシエイト・プログラムの参加者です。
+            </div>
+            &copy; 2026 Harada no Event
+        </div>
+
+    </div>
+
+    <!-- ゲームデータを読み込み -->
+    <script src="games_data.js"></script>
+    
+    <!-- フィルタリングと描画のロジック -->
+    <script>
+        let currentWeight = 'all';
+        let currentPlayer = 'all';
+        let currentTag = 'all';
+        let searchQuery = '';
+
+        const grid = document.getElementById('gameGrid');
+        const searchInput = document.getElementById('searchInput');
+
+        // 人数の範囲内に指定の人数が含まれるか判定
+        function matchPlayerCount(playersStr, selected) {
+            if (selected === 'all') return true;
+            if (playersStr === '不明') return false;
+            
+            const nums = playersStr.match(/\d+/g);
+            if (!nums) return false;
+            
+            const numArr = nums.map(Number);
+            const min = numArr[0];
+            const max = numArr.length > 1 ? numArr[numArr.length - 1] : min;
+            
+            if (selected === '2')  return min <= 2 && max >= 2;
+            if (selected === '3')  return min <= 4 && max >= 3;   // 3〜4人
+            if (selected === '5')  return min <= 6 && max >= 5;   // 5〜6人
+            if (selected === '7')  return max >= 7;                // 7人以上
+            if (selected === '10') return max >= 10;               // 大人数(10人〜)
+            return false;
+        }
+
+        // 描画関数
+        function renderGames() {
+            grid.innerHTML = '';
+            
+            const filtered = gamesData.filter(game => {
+                const matchSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
+                const matchWeight = currentWeight === 'all' || game.weight === currentWeight;
+                const matchPlayer = matchPlayerCount(game.players, currentPlayer);
+                
+                // タグフィルター：カテゴリとカスタムタグの両方をチェック
+                let matchTag = true;
+                if (currentTag !== 'all') {
+                    const isCategory = game.category === currentTag;
+                    const hasTag = game.tags && game.tags.includes(currentTag);
+                    matchTag = isCategory || hasTag;
+                }
+
+                return matchSearch && matchWeight && matchPlayer && matchTag;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="no-results">条件に一致するゲームが見つかりませんでした。</div>';
+                return;
+            }
+
+            filtered.forEach(game => {
+                // Amazonボタン（URLがある場合のみ）
+                const amazonButton = game.amazonUrl 
+                    ? `<a href="${game.amazonUrl}" class="btn-amazon" target="_blank"><i class="fab fa-amazon"></i> Amazonで見る</a>` 
+                    : '';
+                    
+                // カスタムタグのバッジ生成
+                let customTagsHTML = '';
+                if (game.tags && game.tags.length > 0) {
+                    customTagsHTML = game.tags.map(t => `<span class="tag custom">${t}</span>`).join('');
+                }
+
+                const cardHTML = `
+                    <div class="game-card">
+                        <img src="${game.image}" alt="${game.title}" class="game-img" onerror="this.src='https://via.placeholder.com/400x300?text=No+Image'">
+                        <div class="game-info">
+                            <div class="game-tags">
+                                ${game.players !== '不明' ? `<span class="tag players"><i class="fas fa-users"></i> ${game.players}</span>` : ''}
+                                ${game.weight ? `<span class="tag weight">${game.weight}</span>` : ''}
+                                ${game.category ? `<span class="tag category">${game.category}</span>` : ''}
+                                ${customTagsHTML}
+                            </div>
+                            <h3 class="game-title">${game.title}</h3>
+                            ${game.desc ? `<p class="game-desc">${game.desc}</p>` : ''}
+                            ${amazonButton}
+                        </div>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // 検索イベント
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderGames();
+        });
+
+        // フィルターボタンイベント
+        function setupFilters(containerId, updateVarCallback) {
+            const container = document.getElementById(containerId);
+            const buttons = container.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    updateVarCallback(btn.getAttribute('data-val'));
+                    renderGames();
+                });
+            });
+        }
+
+        setupFilters('weightFilters', (val) => currentWeight = val);
+        setupFilters('playerFilters', (val) => currentPlayer = val);
+        setupFilters('tagFilters', (val) => currentTag = val);
+
+        // 初回描画
+        renderGames();
+    </script>
+</body>
+</html>
