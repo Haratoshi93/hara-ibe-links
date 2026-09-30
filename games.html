@@ -297,7 +297,7 @@
         <h1 class="section-title">所有ボードゲーム一覧</h1>
         <p class="section-desc">
             主催者が保有する全ゲームのリストです。<br>
-            ※Amazonリンクがあるゲームのみ購入ボタンが表示されます。
+            ※一部のゲームはAmazonボタンから詳細を確認できます
         </p>
 
         <!-- 検索・フィルター -->
@@ -322,8 +322,8 @@
                     <button class="filter-btn" data-val="2">2人</button>
                     <button class="filter-btn" data-val="3">3〜4人</button>
                     <button class="filter-btn" data-val="5">5〜6人</button>
-                    <button class="filter-btn" data-val="7">7人以上</button>
-                    <button class="filter-btn" data-val="10">大人数(10人〜)</button>
+                    <button class="filter-btn" data-val="7">7〜10人</button>
+                    <button class="filter-btn" data-val="11">11人以上</button>
                 </div>
             </div>
 
@@ -389,8 +389,8 @@
             if (selected === '2')  return min <= 2 && max >= 2;
             if (selected === '3')  return min <= 4 && max >= 3;   // 3〜4人
             if (selected === '5')  return min <= 6 && max >= 5;   // 5〜6人
-            if (selected === '7')  return max >= 7;                // 7人以上
-            if (selected === '10') return max >= 10;               // 大人数(10人〜)
+            if (selected === '7')  return min <= 10 && max >= 7;  // 7〜10人
+            if (selected === '11') return max >= 11;              // 11人以上
             return false;
         }
 
