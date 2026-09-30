@@ -1244,9 +1244,9 @@ const gamesData = [
         "image": "images/no-image.jpg",
         "players": "3〜4人",
         "weight": "中量級",
-        "category": "",
+        "category": "ボードゲーム",
         "tags": [],
-        "desc": "",
+        "desc": "無人島カタンを開拓していく世界的に大ヒットした超定番ボードゲーム。資源を集め、道を繋ぎ、誰よりも早く島を発展させよう！",
         "amazonUrl": "https://link.amazon/B0gGdLEsN"
     },
     {
@@ -1254,9 +1254,9 @@ const gamesData = [
         "image": "images/no-image.jpg",
         "players": "2〜5人",
         "weight": "軽量級",
-        "category": "",
+        "category": "ボードゲーム",
         "tags": [],
-        "desc": "",
+        "desc": "麻雀から複雑なルールを取り除き、シンプルかつ奥深くしたようなタイルゲーム。誰でもすぐに熱中できる和風デザインの傑作。",
         "amazonUrl": "https://link.amazon/B0e1Ne3m7"
     },
     {
@@ -1264,9 +1264,9 @@ const gamesData = [
         "image": "images/no-image.jpg",
         "players": "3〜10人",
         "weight": "軽量級",
-        "category": "",
+        "category": "ボードゲーム",
         "tags": [],
-        "desc": "",
+        "desc": "金塊を掘り進めるドワーフと、それを阻止するお邪魔者に分かれて戦う正体隠匿系カードゲーム。大人数でワイワイ盛り上がる定番。",
         "amazonUrl": "https://link.amazon/B0dxqDxgg"
     },
     {
@@ -1274,9 +1274,9 @@ const gamesData = [
         "image": "images/no-image.jpg",
         "players": "3〜6人",
         "weight": "軽量級",
-        "category": "",
+        "category": "ボードゲーム",
         "tags": [],
-        "desc": "",
+        "desc": "シンプルなルールながら、相手の心理を読み合う白熱のブラフ＆ポーカー風ゲーム。",
         "amazonUrl": "https://link.amazon/B08IGIMRb"
     },
     {
@@ -1284,9 +1284,9 @@ const gamesData = [
         "image": "images/no-image.jpg",
         "players": "5〜6人",
         "weight": "",
-        "category": "",
+        "category": "マダミス",
         "tags": [],
-        "desc": "",
+        "desc": "謎の雨が降る孤島で起きた殺人事件に挑む、本格マーダーミステリー。",
         "amazonUrl": "https://link.amazon/B09h0mdXx"
     },
     {
@@ -1294,9 +1294,9 @@ const gamesData = [
         "image": "images/no-image.jpg",
         "players": "6人",
         "weight": "",
-        "category": "",
+        "category": "マダミス",
         "tags": [],
-        "desc": "",
+        "desc": "錬金術師の住む廃城を舞台に、幻想的な世界観の中で繰り広げられる人間ドラマと謎解き。",
         "amazonUrl": "https://link.amazon/B0al9Pf2o"
     }
 ];
