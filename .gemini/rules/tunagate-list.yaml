@@ -1,0 +1,15 @@
+name: tunagate-list-generator
+description: Handles requests to generate the board game list for Tunagate.
+condition: >
+  The user asks to generate, output, or update the list for "つなげーと" (Tunagate),
+  or asks for the board game list format.
+instructions: |
+  When the user requests the board game list for "つなげーと" (Tunagate):
+  1. Do NOT try to format the list manually from memory.
+  2. Navigate to `c:\dev\hara-ibe-links`.
+  3. First, run `read_sheet.py` using the venv to fetch the latest data from the spreadsheet into `sheet_data.json`.
+     Command: `cmd /c "call venv\Scripts\activate.bat && chcp 65001 && python read_sheet.py"`
+  4. Next, run `generate_tunagate.py` to process the data and generate the formatted list in `tunagate_list.txt`.
+     Command: `cmd /c "call venv\Scripts\activate.bat && chcp 65001 && python generate_tunagate.py"`
+  5. Read the contents of `tunagate_list.txt`.
+  6. Output the contents of the text file directly to the user in a markdown code block.
